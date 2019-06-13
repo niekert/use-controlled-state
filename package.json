@@ -27,13 +27,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "jest": {
-    "globals": {
-      "ts-jest": {
-        "diagnostics": false
-      }
-    }
-  },
   "devDependencies": {
     "@testing-library/react": "^8.0.1",
     "@types/jest": "^24.0.14",

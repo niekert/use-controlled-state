@@ -25,15 +25,15 @@ function TestComponent({ value, onChange }: Props) {
 
 describe('useControlledState', () => {
   const assertState = (ui: React.ReactElement) => {
-    const { queryByText } = render(ui);
+    const { queryByText, getByText } = render(ui);
 
     expect(queryByText('Toggle is off')).not.toBeNull();
 
-    fireEvent.click(queryByText('Toggle with callback'));
+    fireEvent.click(getByText('Toggle with callback'));
 
     expect(queryByText('Toggle is on')).not.toBeNull();
 
-    fireEvent.click(queryByText('Toggle with value'));
+    fireEvent.click(getByText('Toggle with value'));
 
     expect(queryByText('Toggle is off')).not.toBeNull();
   };
