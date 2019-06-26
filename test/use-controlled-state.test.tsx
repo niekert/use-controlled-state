@@ -67,6 +67,21 @@ describe('useControlledState', () => {
     assertState(<ControlledComponent />);
   });
 
+  test('retrieves the correct next value from the component', () => {
+    const ControlledComponent = () => {
+      const [state, setState] = React.useState(false);
+
+      return (
+        <TestComponent
+          value={state}
+          onChange={nextValue => setState(nextValue)}
+        />
+      );
+    };
+
+    assertState(<ControlledComponent />);
+  });
+
   test('Works with default value', () => {
     const { queryByText } = render(<TestComponent value={true} />);
 

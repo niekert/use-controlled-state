@@ -10,7 +10,7 @@ Consider a `<Collapsible />` component. In most cases you just want a simple col
 
 ```jsx
 <Collapsible title="Open collapsible">
-  <div>I'm now visible!
+  <div>I'm now visible!</div>
 </Collapsible>
 ```
 
@@ -19,8 +19,11 @@ You'd have to move state up to a higher component To be able to use it:
 
 ```jsx
 <>
-  <Collapsible isOpen={isOpen} onChange={() => setState(prevIsOpen => !prevIsOpen)} />
-  <div>Collapsible is open? {`${isOpen}`}
+  <Collapsible
+    isOpen={isOpen}
+    onChange={() => setState(prevIsOpen => !prevIsOpen)}
+  />
+  <div>Collapsible is open? {`${isOpen}`}</div>
 </>
 ```
 
@@ -55,9 +58,6 @@ Now you can use the component with a controlled and uncontrolled API
 ```jsx
 <React.Fragment>
   <Collapsible title="Hello">Content</Collapsible>
-  <Collapsible
-    isOpen={isOpen}
-    onChange={() => setState(prevIsOpen => !prevIsOpen)}
-  />
+  <Collapsible isOpen={isOpen} onChange={nextIsOpen => setState(nextIsOpen)} />
 </React.Fragment>
 ```
