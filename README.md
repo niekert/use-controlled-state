@@ -2,7 +2,7 @@
 
 Managing controlled / uncontrolled values can be tedious, and maintaining the duplication between stateful and stateless components can be exhausting. `use-controlled-state abstracts` this pain away [into a simple hook](src/index.tsx).
 
-## [See this CodeSandbox for an example](https://codesandbox.io/s/use-controlled-state-qzfz7)
+## [See this CodeSandbox for an example](https://codesandbox.io/s/use-controlled-state-2zsst)
 
 ## Why
 
